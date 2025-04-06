@@ -3,12 +3,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CenteredContainer = styled.section`
-  height: 100vh; /* Full viewport height */
+  padding: 3rem 2rem; /* Default padding for larger screens */
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 20px; /* Add some padding */
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem; /* Adjust padding for mobile */
+    /* height: auto;  Allow content to grow naturally on smaller screens */
+  }
 `;
 
 const CenteredPage = ({ children }) => {
